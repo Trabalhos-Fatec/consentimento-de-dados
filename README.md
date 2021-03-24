@@ -30,11 +30,11 @@ Para o desenvolvimento do projeto foi determinada a utilização de tecnologias 
 
 ### Desenvolvimento
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png" width="30px;" title="Node.js - logo"> [Node.js](https://nodejs.org/): Plataforma para criar e gerenciar a aplicação Javascript, baseado na pilha da web aberta (HTML, CSS e JS).
+[<img src='https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white' title="Node.js - logo">](https://nodejs.org/): Plataforma para criar e gerenciar a aplicação Javascript, baseado na pilha da web aberta (HTML, CSS e JS).
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" width="30px;" title="React - logo"> [React](https://pt-br.reactjs.org/): Biblioteca JavaScript utilizada para criar as interfaces do usuário na páginas web.
+[<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" title="React - logo">](https://pt-br.reactjs.org/): Biblioteca JavaScript utilizada para criar as interfaces do usuário na páginas web.
 
-<img src="https://devtools.com.br/blog/wp-content/uploads/2013/06/MySQL-Logo.wine_.png" width="30px;" title="MySQL - logo"> [MySQL](https://www.mysql.com/): Sistema de gerenciamento de banco de dados, que utiliza a linguagem SQL como interface, para o armazenamento dos dados.
+[<img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" title="MySQL - logo">](https://www.mysql.com/): Sistema de gerenciamento de banco de dados, que utiliza a linguagem SQL como interface, para o armazenamento dos dados.
 
 ## 📚 Etapas do Desenvolvimento
 * [SPRINT 01]()
