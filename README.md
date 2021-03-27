@@ -37,7 +37,7 @@ Para o desenvolvimento do projeto foi determinada a utilização de tecnologias 
 [<img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" title="MySQL - logo">](https://www.mysql.com/): Sistema de gerenciamento de banco de dados, que utiliza a linguagem SQL como interface, para o armazenamento dos dados.
 
 ## 📚 Etapas do Desenvolvimento
-* [SPRINT 01]()
+* [SPRINT 01](https://github.com/Trabalhos-Fatec/consentimento-de-dados/tree/main/Sprint%2001)
 
 
 ## 👨‍👩‍👧‍👧 Equipe de Desenvolvimento
