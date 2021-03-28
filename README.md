@@ -1,32 +1,64 @@
 <img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação/imagens%20e%20figuras/Banner_principal.png" size="2px">
 
-Este é um repositório referente ao curso de Segurança da Informação (SI), do curso do 5º semestre do ensino superior de Análise e Desenvolvimento de Sistemas da Faculdade de Tecnologia de São José dos Campos (FATEC - SJC), 1° Semestre de 2021.
+********************************
+## Indice
+
+  1. [Proposta](#proposta) </br>
+  2. [Introdução](#intro) </br>
+  3. [Definição do Problema](#problema) </br>
+  4. [Objetivo](#objetivo) </br>
+  5. [Entregas](#entregas) </br>
+  6. [Tecnologias Utilizadas](#techs) </br>
+    6.1. [Desenvolvimento](#desenvolvimento) </br>
+  7. [Equipe](#equipe) </br>
+
+********************************
+
+<div id='proposta'/>  
 
 ## 📝 Proposta
+Este é um repositório referente ao curso de Segurança da Informação (SI), do curso do 5º semestre do ensino superior de Análise e Desenvolvimento de Sistemas da Faculdade de Tecnologia de São José dos Campos (FATEC - SJC), 1° Semestre de 2021.
 
 A proposta deste projeto é desenvolver um programa que se adeque a [Lei LGPD](http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm) (Lei Geral de Proteção de Dados).
+
+<div id='intro'/>  
 
 ## 💡 Introdução
 (Contextualização Fictícia)<br>
 A XPTO é uma empresa que atua no mercado de entreterimento virtual, fundadora da Tutube, uma plataforma de compartilhamento de vídeos online, que permite o acesso a conteúdos online sem que seja necessário realizar o download ou a compra dos mesmos.
 
+
+<div id='problema'/>  
+
 ### Definição do Problema
 
 A base de dados e a aplicação da Tutube não estão de acordo com o modelo da LGPD, e as atividades da empresa sobre os dados ainda não possuem o consentimento verídico do usuário, pois apenas lhe é informado nos termos de uso o que será realizado e também não é permitido alterações nas opções de consentimentos após o cadastro do usuário.
+
+<div id='objetivo'/>  
 
 ### Objetivo
 
 O objetivo deste projeto é adequar a base de dados da plataforma Tutube, para que trabalhe dentro das diretrizes contidas no artigo XII¹ da nova LEI Nº 13.709, DE 14 DE AGOSTO DE 2018 (LGPD), permitindo ao usuário ter uma noção de como seus dados podem ser utilizados, e também controle para que seja utilizado apenas para os fins específicados e determinados pelo mesmo, bem como adaptar a aplicação para que permita que o usuário determine o destino de seus dados.
 
+<div id='entregas'/>  
+
+## 📚 Entregas
+* [SPRINT 01](https://github.com/Trabalhos-Fatec/consentimento-de-dados/tree/main/Sprint%2001)
+
+
+<div id='techs'/> 
+
 ## 🛠 Tecnologias Utilizadas
 
 Para o desenvolvimento do projeto foi determinada a utilização de tecnologias adequadas para o contexto. As tecnologias selecionadas foram agrupadas por áreas de atuação e cada uma é detalhada sobre sua utilidade dentro do projeto. As tecnologias utilizadas são:
 
-<img src="https://media-exp1.licdn.com/dms/image/C560BAQGDq_jNWJhTjQ/company-logo_200_200/0/1566324987720?e=2159024400&v=beta&t=LbqW8QVdQChA_BG2DEPJDkjWBNnkwnBNuMiraBdO_ng" width="30px;" title="Azure DevOps - logo"> [Azure DevOps](https://azure.microsoft.com/pt-br/services/devops/):Plataforma utilizada para o gerenciamento, planejamento, colaboração e visualização de entregas do projeto.
+<img src="https://media-exp1.licdn.com/dms/image/C560BAQGDq_jNWJhTjQ/company-logo_200_200/0/1566324987720?e=2159024400&v=beta&t=LbqW8QVdQChA_BG2DEPJDkjWBNnkwnBNuMiraBdO_ng" width="20px" title="Azure DevOps - logo"> [Azure DevOps](https://azure.microsoft.com/pt-br/services/devops/):Plataforma utilizada para o gerenciamento, planejamento, colaboração e visualização de entregas do projeto.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Figma-1-logo.png" width="30px;" title="Figma - logo"> [Figma](https://www.figma.com/): Framework utilizado para a prototipação do projeto, permitindo o cliente ter uma melhor visualização do produto final, com modelos interativos e normalmente com o visual próximo ao do produto final.
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Figma-1-logo.png" width="20px" title="Figma - logo"> [Figma](https://www.figma.com/): Framework utilizado para a prototipação do projeto, permitindo o cliente ter uma melhor visualização do produto final, com modelos interativos e normalmente com o visual próximo ao do produto final.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png" width="30px;" title="Visual Studio Code - logo"> [Visual Studio Code](https://code.visualstudio.com/): Plataforma utilizada para a interface de desenvolvimento (IDE) do projeto. Neste projeto, a ferramente será utilizada para a construção do Produto Mínimo Viável (MVP) da aplicação e do projeto completo.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png" width="20px" title="Visual Studio Code - logo"> [Visual Studio Code](https://code.visualstudio.com/): Plataforma utilizada para a interface de desenvolvimento (IDE) do projeto. Neste projeto, a ferramente será utilizada para a construção do Produto Mínimo Viável (MVP) da aplicação e do projeto completo.
+
+<div id='desenvolvimento'/> 
 
 ### Desenvolvimento
 
@@ -36,9 +68,8 @@ Para o desenvolvimento do projeto foi determinada a utilização de tecnologias 
 
 [<img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" title="MySQL - logo">](https://www.mysql.com/): Sistema de gerenciamento de banco de dados, que utiliza a linguagem SQL como interface, para o armazenamento dos dados.
 
-## 📚 Etapas do Desenvolvimento
-* [SPRINT 01](https://github.com/Trabalhos-Fatec/consentimento-de-dados/tree/main/Sprint%2001)
 
+<div id='equipe'/> 
 
 ## 👨‍👩‍👧‍👧 Equipe de Desenvolvimento
 
@@ -89,6 +120,6 @@ Para o desenvolvimento do projeto foi determinada a utilização de tecnologias 
   </tbody>
 </table>
 
-### 👨🏻‍🏫 Professor Orientador
+## 👨🏻‍🏫 Professor Orientador
 
 - Eduardo Sakaue
