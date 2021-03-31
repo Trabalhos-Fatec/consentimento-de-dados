@@ -23,6 +23,8 @@
 A tabela de permissões é responsável por armazenar a opção (de forma binária) que o usuario informa na plataforma 
 <a href="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/README.md">Tutube</a> sobre como consentir ao uso de seus dados.
 
+A tabela de clientes armazena informações sobre os clientes, dados de cadastro.
+
 
 
 <div id='tb_1_db'/>  
