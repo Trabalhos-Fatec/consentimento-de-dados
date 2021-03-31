@@ -5,10 +5,8 @@
 ## Indice
 
   1. [Tabela permissões](#tb_1) </br>
-    1-1. [Sobre](#tb_1_about) </br>
     1-2. [Criação da tabela no Banco de Dados](#tb_1_db)
   2. [Tabela cliente](#tb_2) </br>
-    2-1. [Sobre](#tb_2_about) </br>
     2-2. [Criação da tabela no Banco de Dados](#tb_2_db)
 
 ********************************
@@ -37,10 +35,24 @@ CREATE TABLE pnl_permissoes (
     cad_aceite_termo DATE,
     notifica_email BINARY,
     notifica_sms BINARY,
+    id_user INTEGER,
     
 	PRIMARY KEY(id_perm),
+	FOREIGN KEY (id_user)
   INDEX (cad_aceite_termo, notifica_email, notifica_sms));
 ```
 
-<div id='tb_1_about'/>  
 
+<div id='tb_2_db'/>  
+
+### Criação da tabela de clientes
+
+```
+CREATE TABLE pnl_cliente (
+    id_user INTEGER AUTO_INCREMENT UNIQUE NOT NULL,
+    data_nascimento DATE,
+    email VARCHAR(30),
+    telefone VARCHAR(15),
+    
+	PRIMARY KEY(id_user);
+```
