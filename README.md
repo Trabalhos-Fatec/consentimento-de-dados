@@ -42,9 +42,8 @@ O objetivo deste projeto é adequar a base de dados da plataforma Tutube, para q
 
 <div id='entregas'/>  
 
-## 📚 Entregas
-* [SPRINT 01](https://github.com/Trabalhos-Fatec/consentimento-de-dados/tree/main/Sprint%2001)
-
+## 📚 Planejamento
+<img src='https://raw.githubusercontent.com/Trabalhos-Fatec/consentimento-de-dados/main/Documenta%C3%A7%C3%A3o/imagens%20e%20figuras/Planejamento%20Sprints.png'>
 
 <div id='techs'/> 
 
