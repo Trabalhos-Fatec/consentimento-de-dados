@@ -1,60 +1,84 @@
 # 🎲 Banco De Dados
 
 
-********************************
-## Indice
+### TABELA USUARIOS
 
-  1. [Tabela permissões](#tb_1) </br>
-    1-2. [Criação da tabela no Banco de Dados](#tb_1_db)
-  2. [Tabela cliente](#tb_2) </br>
-    2-2. [Criação da tabela no Banco de Dados](#tb_2_db)
+```type: sql
 
-********************************
-
-<div id='tb_1'/>  
-
-## Tabela permissões
-
-
-<div id='tb_1'/>  
-
-### Sobre
-
-A tabela de permissões é responsável por armazenar a opção (de forma binária) que o usuario informa na plataforma 
-<a href="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/README.md">Tutube</a> sobre como consentir ao uso de seus dados.
-
-A tabela de clientes armazena informações sobre os clientes, dados de cadastro.
-
-
-
-<div id='tb_1_db'/>  
-
-### Criação da tabela de permissões
-
-```
-CREATE TABLE pnl_permissoes (
-    id_perm INTEGER AUTO_INCREMENT UNIQUE NOT NULL,
-    cad_aceite_termo DATE,
-    notifica_email BINARY,
-    notifica_sms BINARY,
-    id_user INTEGER,
-    
-	PRIMARY KEY(id_perm),
-	FOREIGN KEY (id_user)
-  INDEX (cad_aceite_termo, notifica_email, notifica_sms));
-```
-
-
-<div id='tb_2_db'/>  
-
-### Criação da tabela de clientes
-
-```
-CREATE TABLE pnl_cliente (
-    id_user INTEGER AUTO_INCREMENT UNIQUE NOT NULL,
+CREATE TABLE pnl_usuarios (
+    id_usuario INTEGER NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
     data_nascimento DATE,
-    email VARCHAR(30),
-    telefone VARCHAR(15),
-    
-	PRIMARY KEY(id_user);
+    telefone VARCHAR(20)
+);
+```
+
+
+### TABELA LOGINS
+
+```
+
+CREATE TABLE pnl_logins (
+    id_login INTEGER NOT NULL AUTO_INCREMENT,
+    email VARCHAR(30) NOT NULL,
+    senha VARCHAR(10) NOT NULL,
+    id_usuario INTEGER,
+    PRIMARY KEY (id_login),
+    FOREIGN KEY (id_usuario)
+        REFERENCES pnl_usuarios (id_usuario)
+);
+```
+
+
+### TABELA TRANFERENCIA
+
+```
+CREATE TABLE pnl_transferencia (
+    id_transf INTEGER NOT NULL AUTO_INCREMENT,
+    status_email INTEGER,
+    status_sms INTEGER,
+    status_newsletter INTEGER,
+    data_modificacao DATETIME,
+    data_cadastro DATETIME,
+    id_usuario INTEGER,
+    PRIMARY KEY (id_transf),
+    FOREIGN KEY (id_usuario)
+        REFERENCES pnl_usuarios (id_usuario)
+);
+```
+
+
+### TABELA CONSENTIMENTO
+
+``` 
+CREATE TABLE pnl_consentimento (
+    id_cons INTEGER NOT NULL AUTO_INCREMENT,
+    data_modificacao DATETIME,
+    termo_de_uso INTEGER,
+    id_usuario INTEGER,
+    id_transf INTEGER,
+    PRIMARY KEY (id_cons),
+    FOREIGN KEY (id_usuario)
+        REFERENCES pnl_usuarios (id_usuario),
+    FOREIGN KEY (id_transf)
+        REFERENCES pnl_transferencia (id_transf)
+);
+```
+
+### VIEW HISTORICO CONSENTIMENTO
+
+```
+
+
+CREATE TABLE pnl_historico (
+    id_hist INTEGER NOT NULL UNIQUE AUTO_INCREMENT,
+    data_modificacao DATETIME,
+    status_email VARCHAR(7),
+    status_sms VARCHAR(7),
+    id_usuario INTEGER,
+    PRIMARY KEY (id_hist),
+    FOREIGN KEY (id_usuario)
+        REFERENCES pnl_usuarios (id_usuario)
+); 
+
 ```
