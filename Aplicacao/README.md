@@ -1,14 +1,30 @@
 <a href="https://github.com/Trabalhos-Fatec/consentimento-de-dados">  <- Voltar  </a>
 
 
-# Sprint 01
+# Como rodar o projeto
 
-08/03/2021 - 28/03/2021
+Ao baixar o projeto na sua máquina, você vai precisar baixar o pacote node-modules para que sejam baixadas todas as dependencias do projeto.
 
-* Modelagem da Aplicação
-  * [Prototipação do MVP ](https://www.figma.com/proto/rtOOh5QyGucf5KtH1UdlK7/Seguran%C3%A7a-da-Informa%C3%A7%C3%A3o?node-id=103%3A10&scaling=contain&page-id=0%3A1)
-* Modelagem do Banco de Dados (UML)
-  * <a href="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Sprint%2001/Documentação/Banco-De-Dados.md">Documentação </a>
-* <a href="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Sprint%2001/Documentação/Tecnologias.md"> Definição das tecnologias que serão utilizadas durante o desenvolvimento </a>
-*  <a href="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Sprint%2001/Documentação/Formalização%20do%20Trabalho.pdf"> Documentação com Backlog da aplicação </a>
+Sendo assim, acesse o diretório ``Aplicação`` e pelo terminal (seja no prompt ou no terminal do seu editor de código), informe o comando:
+ 
+ ```
+ npm init
+ ```
 
+para inicializar o npm no diretório, e em seguida:
+
+ ```
+npm i node-modules --no-audit 
+ ```
+
+para criação da pasta node-modules e instalação das dependencias do projeto.
+
+Pronto, finalizamos a instalção das dependências !! 🎉
+
+agora, para rodar o projeto, você vai precisar passar o seguite comando no terminal:
+
+ ```
+npm i start
+ ```
+ 
+ e o projeto deverá abrir a aplicação no seu navegador 😉.
