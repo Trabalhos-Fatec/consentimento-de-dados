@@ -21,7 +21,8 @@ Para essa aplicação foi planejado a criação de cinco(5) tabelas, sendo uma d
 * Usuário
   * Essa tabela armazena os dados de todos usuários da aplicação, incluindo nome, sobrenome, data de nascimento, celular e telefone no usuário.
 * Consentimento
-  * Essa tabela é importante, pois é nela que ficará salvo quais ações tem o consentimento do usuário, por exemplo, se ele aceita ou não receber notificações via e-mail, celular ou telefone.
+  * A tabela de consentimentos é responsável por armazenar a opção (de forma binária) que o usuário informa na plataforma 
+<a href="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/README.md">Tutube</a> sobre como ele consentir ao uso de seus dados, por exemplo, se ele aceita ou não receber notificações via e-mail sobre a plataforma.
 * Histórico 
   * O histórico é uma tabela de view (conjunto de resultados de uma consulta armazenada sobre os dados do banco) que contém as informação das modificações dos consentimentos relaizada pelo usuário que tem os dados sobre a data e as versões das escolhas dos consentimentos do usuário.
 * Transferência
