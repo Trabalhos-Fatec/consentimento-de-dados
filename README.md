@@ -1,16 +1,18 @@
 <img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Repositório/imagens%20e%20figuras/Banner_principal.png" size="2px">
 
-********************************
 ## Indice
 
-  1. [Proposta](#proposta) </br>
-  2. [Introdução](#intro) </br>
-  3. [Definição do Problema](#problema) </br>
-  4. [Objetivo](#objetivo) </br>
-  5. [Entregas](#entregas) </br>
-  6. [Tecnologias Utilizadas](#techs) </br>
-    6.1. [Desenvolvimento](#desenvolvimento) </br>
-  7. [Equipe](#equipe) </br>
+* [Proposta](#proposta) </br>
+* [Introdução](#intro) </br>
+  * [Definição do Problema](#problema) </br>
+  * [Objetivo](#objetivo) </br>
+* [Planejamento - Sprints](#planejamento) </br>
+* [Tecnologias Utilizadas](#techs) </br>
+  * [Gerenciamento](#gerenciamento)</br>
+  * [Desenvolvimento](#desenvolvimento) </br>
+* [Prototipo](#prototipo)</br>
+* [Banco de Dados](#banco)</br>
+* [Equipe de Desenvolvimento](#equipe) </br>
 
 ********************************
 
@@ -40,9 +42,9 @@ A base de dados e a aplicação da Tutube não estão de acordo com o modelo da 
 
 O objetivo deste projeto é adequar a base de dados da plataforma Tutube, para que trabalhe dentro das diretrizes contidas no artigo XII¹ da nova LEI Nº 13.709, DE 14 DE AGOSTO DE 2018 (LGPD), permitindo ao usuário ter uma noção de como seus dados podem ser utilizados, e também controle para que seja utilizado apenas para os fins específicados e determinados pelo mesmo, bem como adaptar a aplicação para que permita que o usuário determine o destino de seus dados.
 
-<div id='entregas'/>  
+<div id='planejamento'/>  
 
-## 📚 Planejamento
+## 📚 Planejamento - Sprints
 <img src='https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Repositório/imagens%20e%20figuras/Planejamento%20Sprints.png'>
 
 <div id='techs'/> 
@@ -50,6 +52,10 @@ O objetivo deste projeto é adequar a base de dados da plataforma Tutube, para q
 ## 🛠 Tecnologias Utilizadas
 
 Para o desenvolvimento do projeto foi determinada a utilização de tecnologias adequadas para o contexto. As tecnologias selecionadas foram agrupadas por áreas de atuação e cada uma é detalhada sobre sua utilidade dentro do projeto. As tecnologias utilizadas são:
+
+<div id='gerenciamento'/> 
+
+### Gerenciamento
 
 <img src="https://media-exp1.licdn.com/dms/image/C560BAQGDq_jNWJhTjQ/company-logo_200_200/0/1566324987720?e=2159024400&v=beta&t=LbqW8QVdQChA_BG2DEPJDkjWBNnkwnBNuMiraBdO_ng" width="20px" title="Azure DevOps - logo"> [Azure DevOps](https://azure.microsoft.com/pt-br/services/devops/):Plataforma utilizada para o gerenciamento, planejamento, colaboração e visualização de entregas do projeto.
 
@@ -61,12 +67,32 @@ Para o desenvolvimento do projeto foi determinada a utilização de tecnologias 
 
 ### Desenvolvimento
 
-[<img src='https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white' title="Node.js - logo">](https://nodejs.org/): Plataforma para criar e gerenciar a aplicação Javascript, baseado na pilha da web aberta (HTML, CSS e JS).
+[<img src='https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white' title="Node.js - logo">](https://nodejs.org/)
+Plataforma para criar e gerenciar a aplicação Javascript, baseado na pilha da web aberta (HTML, CSS e JS).
 
-[<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" title="React - logo">](https://pt-br.reactjs.org/): Biblioteca JavaScript utilizada para criar as interfaces do usuário na páginas web.
+[<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" title="React - logo">](https://pt-br.reactjs.org/) 
+Biblioteca JavaScript utilizada para criar as interfaces do usuário na páginas web.
 
-[<img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" title="MySQL - logo">](https://www.mysql.com/): Sistema de gerenciamento de banco de dados, que utiliza a linguagem SQL como interface, para o armazenamento dos dados.
+[<img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" title="MySQL - logo">](https://www.mysql.com/) 
+Sistema de gerenciamento de banco de dados, que utiliza a linguagem SQL como interface, para o armazenamento dos dados.
 
+[Veja mais](https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documenta%C3%A7%C3%A3o%20Aplica%C3%A7%C3%A3o/Aplica%C3%A7%C3%A3o/Tecnologias.md) detalhes sobre as tecnologias utilizadas...
+
+
+<div id='prototipo'/>
+
+## 💻 Prototipação
+A prototipação é essencial para a visualização do projeto antes de começar o desenvolvimento.
+Para visualizar a prototipação dessa aplicação e navegar entre as telas acesse o [link](https://www.figma.com/proto/rtOOh5QyGucf5KtH1UdlK7/Seguran%C3%A7a-da-Informa%C3%A7%C3%A3o?node-id=103%3A10&scaling=scale-down).
+
+[Veja mais](https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documenta%C3%A7%C3%A3o%20Aplica%C3%A7%C3%A3o/Aplica%C3%A7%C3%A3o/Prototipo.md) detalhes sobre as telas prototipadas...
+
+<div id='banco'/>
+
+## 🎲 Banco de Dados
+O banco de dados é uma parte essencial de uma aplicação. Ele é o responsável por armazenar os dados que poderão ser transformados em informações importantes para o usuário.
+
+[Veja mais](https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documenta%C3%A7%C3%A3o%20Aplica%C3%A7%C3%A3o/Banco%20de%20Dados/Banco.md) detalhes sobre o banco de dados do projeto...
 
 <div id='equipe'/> 
 
