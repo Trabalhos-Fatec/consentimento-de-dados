@@ -14,7 +14,6 @@
 * [Banco de Dados](#banco)</br>
 * [Equipe de Desenvolvimento](#equipe) </br>
 
-********************************
 
 <div id='proposta'/>  
 
