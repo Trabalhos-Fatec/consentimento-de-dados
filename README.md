@@ -91,7 +91,7 @@ Para visualizar a prototipação dessa aplicação e navegar entre as telas aces
 ## 🎲 Banco de Dados
 O banco de dados é uma parte essencial de uma aplicação. Ele é o responsável por armazenar os dados que poderão ser transformados em informações importantes para o usuário.
 
-[Veja mais](https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documenta%C3%A7%C3%A3o%20Aplica%C3%A7%C3%A3o/Banco%20de%20Dados/Banco.md) detalhes sobre o banco de dados do projeto...
+[Veja mais](https://github.com/Trabalhos-Fatec/consentimento-de-dados/tree/main/Documentação%20Aplicação/Banco%20de%20Dados) detalhes sobre o banco de dados do projeto...
 
 <div id='equipe'/> 
 
