@@ -27,26 +27,26 @@ function Historico() {
                             >
                                 <div class="accordion-body">
                                     <div class="col m-4">
-                                        <div class="card m-3 bg-danger" style={{ height: '9vh' }}>
-                                            <div class="card-body text-black">
+                                        <div class="card m-3" style={{ height: '9vh', backgroundColor:"#de4343" }}>
+                                            <div class="card-body text-white">
                                                 <p class="text-start  m-0">20/07/2020</p>
                                                 <p class="text-center m-0">Ana Maria Roberta não quer notificações pelo site.</p>
                                             </div>
                                         </div>
-                                        <div class="card m-3 bg-success" style={{ height: '9vh' }}>
-                                            <div class="card-body text-black">
-                                                <p class="text-start  m-0">01/06/2020</p>
+                                        <div class="card m-3" style={{ height: '9vh', backgroundColor:"#5fde43"}}>
+                                            <div class="card-body text-white">
+                                                <p class="text-start  m-0" >01/06/2020</p>
                                                 <p class="text-center m-0">Ana Maria Roberta aceita notificações pelo site.</p>
                                             </div>
                                         </div>
-                                        <div class="card m-3 bg-danger" style={{ height: '9vh' }}>
-                                            <div class="card-body text-black">
+                                        <div class="card m-3" style={{ height: '9vh', backgroundColor:"#de4343" }}>
+                                            <div class="card-body text-white">
                                                 <p class="text-start  m-0">24/02/2020</p>
                                                 <p class="text-center m-0">Ana Maria Roberta não quer notificações por email.</p>
                                             </div>
                                         </div>
-                                        <div class="card m-3 bg-danger" style={{ height: '9vh' }}>
-                                            <div class="card-body text-black">
+                                        <div class="card m-3" style={{ height: '9vh', backgroundColor:"#de4343" }}>
+                                            <div class="card-body text-white">
                                                 <p class="text-start  m-0">24/02/2020</p>
                                                 <p class="text-center m-0">Ana Maria Roberta não quer notificações pelo site.</p>
                                             </div>
@@ -116,7 +116,7 @@ function Historico() {
                             </div>
                         </div>
                         <div className="text-end m-3">
-                        <a href="/" class="btn btn-primary">Volta</a> 
+                        <a href="/" class="btn btn-primary">Voltar</a> 
                         </div>                            
                     </div>
                 </div>
