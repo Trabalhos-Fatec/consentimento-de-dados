@@ -1,5 +1,5 @@
 import React from 'react';
-import './perfil.css';
+import './css/perfil.css';
 
 
 
@@ -76,7 +76,7 @@ function Perfil() {
                                             aria-hidden="true"
                                         >
                                             <div>
-                                                <div class="modal-dialog w-100">
+                                                <div class="modal-dialog modal-lg w-100">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <h5 class="modal-title" id="exampleModalLabel">Opções de Privacidade</h5>
@@ -89,7 +89,7 @@ function Perfil() {
                                                         </div>
 
                                                         <div class="modal-body">
-                                                            
+
                                                             <div class="form-check">
                                                                 <input
                                                                     class="form-check-input"
@@ -97,9 +97,7 @@ function Perfil() {
                                                                     value=""
                                                                     id="flexCheckDefault"
                                                                 />
-                                                                <label class="form-check-label" for="flexCheckDefault">
-                                                                    Eu aceito os termos de licença
-  </label>
+                                                                <label class="form-check-label" for="flexCheckDefault">Eu aceito os termos de licença</label>
                                                             </div>
                                                             <div class="form-check">
                                                                 <input
@@ -108,9 +106,7 @@ function Perfil() {
                                                                     value=""
                                                                     id="flexCheckDefault1"
                                                                 />
-                                                                <label class="form-check-label text-left" for="flexCheckDefault1">
-                                                                    Eu quero receber novidades por email
-  </label>
+                                                                <label class="form-check-label text-left" for="flexCheckDefault1">Eu quero receber novidades por email</label>
                                                             </div>
                                                             <div class="form-check">
                                                                 <input
@@ -119,17 +115,14 @@ function Perfil() {
                                                                     value=""
                                                                     id="flexCheckDefault2"
                                                                 />
-                                                                <label class="form-check-label" for="flexCheckDefault2">
-                                                                    Eu quero receber novidades por celular.
-  </label>
+                                                                <label class="form-check-label" for="flexCheckDefault2">Eu quero receber novidades pelo site</label>
                                                             </div>
+                                                            <br></br>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-success">Ler Termos de Licença</button>
-                                                            <button type="button" class="btn btn-primary" data-mdb-dismiss="modal">
-                                                                Salvar
-        </button>
-
+                                                            <a href="/Historico" class="btn btn-info btn-sm">Histórico de modificação</a>
+                                                            <button type="button" class="btn btn-success btn-sm">Termos de Licença</button>                                                      
+                                                            <button type="button" class="btn btn-danger btn-sm" data-mdb-dismiss="modal">Salvar</button>
                                                         </div>
                                                     </div>
                                                 </div>
