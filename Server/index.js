@@ -57,7 +57,7 @@ app.post('/api/insertHist', (req, res) => {
 
 // busca das informações do historico (mais recentes)
 app.get('/api/getLast', (req, res) => {
-    const sqlSelect = 'SELECT DATE_FORMAT(data_modificacao, "%m/%d/%Y") as data_modificacao, status_email, status_sms FROM PNL_HISTORICO where id_usuario = 1 ORDER BY data_modificacao DESC LIMIT 8;'
+    const sqlSelect = 'SELECT DATE_FORMAT(data_modificacao, "%d/%m/%Y") as data_modificacao, status_email, status_sms FROM PNL_HISTORICO where id_usuario = 1 ORDER BY data_modificacao DESC LIMIT 8;'
 
     db.query(sqlSelect, (err, result) => {
         res.send(result);

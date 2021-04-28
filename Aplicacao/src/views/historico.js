@@ -1,13 +1,31 @@
-import React from 'react';
 import './css/historico.css';
+import React, { useEffect, useState } from "react";
+import Axios from "axios";
 
 function Historico() {
+
+    const [historico, setHistorico] = useState([]);
+
+
+    useEffect(() => {
+        Axios.get("http://localhost:3001/api/getLast").then((response) => {
+            setHistorico(response.data)
+        })
+    }, []);
+
+    const verifyStatus=((value)=>{
+        if(value === "1") return "SIM";
+        else if(value === "0" || value === "") return "NÃO";
+    })
+
+
     return (
         <div id="divPrincipal" class="container" style={{ height: '100vh' }}>
             <div class="row justify-content-center align-items-center h-100">
                 <div class="col">
                     <p class="text-start fs-1">HISTÓRICO DE MODIFICAÇÕES</p>
                     <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button
                                     class="accordion-button"
@@ -36,30 +54,17 @@ function Historico() {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <th scope="row">20/07/2020</th>
-                                                    <td>SIM</td>
-                                                    <td>NÃO</td>
-                                                    <td>NÃO</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">01/06/2020</th>
-                                                    <td>SIM</td>
-                                                    <td>NÃO</td>
-                                                    <td>SIM</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">24/02/2020</th>
-                                                    <td>SIM</td>
-                                                    <td>NÃO</td>
-                                                    <td>NÃO</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">16/01/2020</th>
-                                                    <td>SIM</td>
-                                                    <td>SIM</td>
-                                                    <td>SIM</td>
-                                                </tr>
+                                                {historico.map((value) => {
+                                                     return <tr>
+                                                                <th scope="row">
+                                                                    {value.data_modificacao}
+                                                                </th>
+                                                                <td>SIM</td>
+                                                                <td>{verifyStatus(value.status_email)}</td>
+                                                                <td>{verifyStatus(value.status_sms)}</td>
+                                                                
+                                                    </tr>
+                                                })}
                                             </tbody>
                                         </table>
                                     </div>
@@ -72,7 +77,7 @@ function Historico() {
                     </div>
                 </div>
             </div>
+        </div>
     )
 }
 export default Historico;
-

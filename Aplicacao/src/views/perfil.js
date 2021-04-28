@@ -147,6 +147,7 @@ function Perfil() {
                                   onChange={(e) =>
                                     setTransfEmail(e.target.checked)
                                   }
+                                  
                                   id="transferenciaEmail"
                                 />
                                 <label
@@ -185,7 +186,7 @@ function Perfil() {
                               <button
                                 type="submit"
                                 class="btn btn-danger btn-sm"
-                                onClick={updateConsentment()}
+                                onClick={updateConsentment}
                               >Salvar</button>
                             </div>
                           </div>
