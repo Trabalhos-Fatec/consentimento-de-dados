@@ -5,7 +5,7 @@
 
 Ao baixar o projeto na sua máquina, você vai precisar baixar o pacote node-modules para que sejam baixadas todas as dependencias do projeto.
 
-Sendo assim, acesse o diretório ``Aplicação`` e pelo terminal (seja no prompt ou no terminal do seu editor de código), informe o comando:
+Sendo assim, acesse o diretório ``Server`` e pelo terminal (seja no prompt ou no terminal do seu editor de código), informe o comando:
  
  ```
  npm init
