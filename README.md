@@ -6,11 +6,11 @@
 * [Introdução](#intro) </br>
   * [Definição do Problema](#problema) </br>
   * [Objetivo](#objetivo) </br>
-* [Planejamento - Sprints](#planejamento) </br>
+* [Planejamento de Desenvolvimento- Sprints](#planejamento) </br>
 * [Tecnologias Utilizadas](#techs) </br>
   * [Gerenciamento](#gerenciamento)</br>
   * [Desenvolvimento](#desenvolvimento) </br>
-* [Prototipo](#prototipo)</br>
+* [Protótipo](#prototipo)</br>
 * [Banco de Dados](#banco)</br>
 * [Equipe de Desenvolvimento](#equipe) </br>
 
@@ -20,13 +20,13 @@
 ## 📝 Proposta
 Este é um repositório referente ao curso de Segurança da Informação (SI), do curso do 5º semestre do ensino superior de Análise e Desenvolvimento de Sistemas da Faculdade de Tecnologia de São José dos Campos (FATEC - SJC), 1° Semestre de 2021.
 
-A proposta deste projeto é desenvolver um programa que se adeque a [Lei LGPD](http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm) (Lei Geral de Proteção de Dados).
+A proposta deste projeto é desenvolver um software que se adeque a [LGPD](http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm) (Lei Geral de Proteção de Dados).
 
 <div id='intro'/>  
 
 ## 💡 Introdução
 (Contextualização Fictícia)<br>
-A XPTO é uma empresa que atua no mercado de entreterimento virtual, fundadora da Tutube, uma plataforma de compartilhamento de vídeos online, que permite o acesso a conteúdos online sem que seja necessário realizar o download ou a compra dos mesmos.
+A XPTO é uma empresa que atua no mercado de entreterimento virtual, ela é a fundadora da Tutube, uma plataforma de compartilhamento de vídeos online, que permite o acesso a conteúdos online sem que seja necessário realizar o download ou a compra dos mesmos.
 
 
 <div id='problema'/>  
@@ -43,7 +43,7 @@ O objetivo deste projeto é adequar a base de dados da plataforma Tutube, para q
 
 <div id='planejamento'/>  
 
-## 📚 Planejamento - Sprints
+## 📚 Planejamento de Desenvolvimento - Sprints
 <img src='https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Repositório/imagens%20e%20figuras/Planejamento%20Sprints.png'>
 
 <div id='techs'/> 
@@ -56,7 +56,7 @@ Para o desenvolvimento do projeto foi determinada a utilização de tecnologias 
 
 ### Gerenciamento
 
-<img src="https://media-exp1.licdn.com/dms/image/C560BAQGDq_jNWJhTjQ/company-logo_200_200/0/1566324987720?e=2159024400&v=beta&t=LbqW8QVdQChA_BG2DEPJDkjWBNnkwnBNuMiraBdO_ng" width="20px" title="Azure DevOps - logo"> [Azure DevOps](https://azure.microsoft.com/pt-br/services/devops/):Plataforma utilizada para o gerenciamento, planejamento, colaboração e visualização de entregas do projeto.
+<img src="https://media-exp1.licdn.com/dms/image/C560BAQGDq_jNWJhTjQ/company-logo_200_200/0/1566324987720?e=2159024400&v=beta&t=LbqW8QVdQChA_BG2DEPJDkjWBNnkwnBNuMiraBdO_ng" width="20px" title="Azure DevOps - logo"> [Azure DevOps](https://azure.microsoft.com/pt-br/services/devops/): Plataforma utilizada para o gerenciamento, planejamento, colaboração e visualização de entregas do projeto.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Figma-1-logo.png" width="20px" title="Figma - logo"> [Figma](https://www.figma.com/): Framework utilizado para a prototipação do projeto, permitindo o cliente ter uma melhor visualização do produto final, com modelos interativos e normalmente com o visual próximo ao do produto final.
 
@@ -80,7 +80,7 @@ Sistema de gerenciamento de banco de dados, que utiliza a linguagem SQL como int
 
 <div id='prototipo'/>
 
-## 💻 Prototipação
+## 💻 Protótipo
 A prototipação é essencial para a visualização do projeto antes de começar o desenvolvimento.
 Para visualizar a prototipação dessa aplicação e navegar entre as telas acesse o [link](https://www.figma.com/proto/rtOOh5QyGucf5KtH1UdlK7/Seguran%C3%A7a-da-Informa%C3%A7%C3%A3o?node-id=103%3A10&scaling=scale-down).
 
