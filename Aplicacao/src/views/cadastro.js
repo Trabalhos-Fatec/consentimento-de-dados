@@ -59,34 +59,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 function Cadastro() {
-  const [state, setState] = React.useState({
-    checkedA: true,
-    checkedB: true,
-  });
 
-  const handleChange = (event) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
-  };
-
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const classes = useStyles();
-
-  const [selectedDate, setSelectedDate] = React.useState(
-    new Date("2000-05-14T21:11:54")
-  );
-
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
     {/*  Variáveis State */}
   const [state, setState] = React.useState({
     checkedA: true,
