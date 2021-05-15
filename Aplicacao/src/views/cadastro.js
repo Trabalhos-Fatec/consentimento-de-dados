@@ -36,7 +36,10 @@ const GreenCheckbox = withStyles({
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 275,
+    minWidth: 300,
+  },
+  gridizinha: {
+    flexGrow: 1,
   },
   bullet: {
     display: "inline-block",
@@ -84,14 +87,50 @@ function Cadastro() {
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
+    {/*  Variáveis State */}
+  const [state, setState] = React.useState({
+    checkedA: true,
+    checkedB: true,
+  });
+
+  const handleChange = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const classes = useStyles();
+
+  const [selectedDate, setSelectedDate] = React.useState(
+    new Date("2000-05-14T21:11:54")
+  );
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+  };
 
   return (
-    <div id="divPrincipal" class="container" style={{ height: "100vh" }}>
-      <div class="row justify-content-center align-items-center h-100">
-        <div class="col-md-5 col-sm-8">
-          <Card align="center" className={classes.root}>
-            {/* Conteúdo do Card */}
-            <CardContent>
+    <div className="gridizinha">
+      <Grid
+        container
+        direction="column"
+        justify="center"
+        alignItems="center"
+        spacing={0}
+        style={{ minHeight: "100vh" }}
+      >
+        <Card align="center" className={classes.root}>
+          {/* Conteúdo do Card */}
+          <CardContent>
+            <Grid item xs>
               {/* Título */}
               <Typography
                 id="Cadastro"
@@ -101,182 +140,193 @@ function Cadastro() {
               >
                 CADASTRO
               </Typography>
-              {/* Seção dos Dados Pessoais */}
+            </Grid>
+
+            {/* Seção dos Dados Pessoais */}
+            <Typography style={{ fontSize: "17px" }} align="left">
+              Dados Pessoais
+            </Typography>
+            <Divider
+              style={{ marginBottom: "15px" }}
+              class="divider"
+              variant="middle"
+            />
+
+            <form  noValidate autoComplete="off">
+              <Grid item xs>
+                <Grid container direction="column">
+                  <TextField required id="standard-basic" label="Nome" />
+                  <TextField required id="standard-basic" label="Sobrenome" />
+
+                  <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    <KeyboardDatePicker
+                      required
+                      style={{ marginBottom: "30px" }}
+                      disableToolbar
+                      variant="inline"
+                      format="dd/MM/yyyy"
+                      margin="normal"
+                      id="date-picker-inline"
+                      label="Data de Nascimento"
+                      value={selectedDate}
+                      onChange={handleDateChange}
+                      KeyboardButtonProps={{
+                        "aria-label": "change date",
+                      }}
+                    />
+                  </MuiPickersUtilsProvider>
+                </Grid>
+              </Grid>
+
+              {/* Seção dos Dados da Conta */}
               <Typography style={{ fontSize: "17px" }} align="left">
-                Dados Pessoais
+                Dados da Conta
               </Typography>
               <Divider
                 style={{ marginBottom: "15px" }}
                 class="divider"
                 variant="middle"
               />
-
-              <form noValidate autoComplete="off">
-                <Grid
+              <Grid item xs>
+                <TextField
+                  required
+                  style={{ marginBottom: "10px" }}
+                  fullWidth
+                  id="standard-basic"
+                  label="Email"
+                />
+                <TextField
+                  required
                   style={{ marginBottom: "20px" }}
-                  container
-                  justify="space-around"
-                >
-                  <TextField required id="standard-basic" label="Nome" />
-                  <TextField required id="standard-basic" label="Sobrenome" />
+                  fullWidth
+                  id="standard-basic"
+                  type="password"
+                  label="Senha"
+                />
+              </Grid>
+
+              {/* Seção de Contato */}
+              <Typography style={{ fontSize: "17px" }} align="left">
+                Contato
+              </Typography>
+              <Divider
+                style={{ marginBottom: "5px" }}
+                class="divider"
+                variant="middle"
+              />
+              <Grid item xs>
+                <TextField
+                style={{marginBottom:"35px"}}
+                  required
+                  fullWidth
+                  id="standard-basic"
+                  type="number"
+                  label="Telefone"
+                />
+              </Grid>
+
+              {/* Seção de Privacidade*/}
+              <Typography style={{ fontSize: "17px" }} align="left">
+                Privacidade
+              </Typography>
+              <Divider
+                style={{ marginBottom: "15px" }}
+                class="divider"
+                variant="middle"
+              />
+              <Grid container direction="column"  alignItems="flex-start">
+                <Grid item xs>
+                  <Grid container direction="row">
+                    <Grid item xs sm="10">
+                      <FormControlLabel
+                        control={
+                          <GreenCheckbox
+                            checked={state.checkedG}
+                            onChange={handleChange}
+                            name="checkedA"
+                          />
+                        }
+                        label="Eu aceito os termos de licença"
+                      />
+                    </Grid>
+                    <Grid item xs sm="2">
+                      <Button onClick={handleClickOpen} variant="outlined">
+                        Ler
+                      </Button>
+                    </Grid>
+                  </Grid>
                 </Grid>
-                <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                  <KeyboardDatePicker
-                    required
-                    style={{ marginBottom: "40px" }}
-                    disableToolbar
-                    variant="inline"
-                    format="MM/dd/yyyy"
-                    margin="normal"
-                    id="date-picker-inline"
-                    label="Date picker inline"
-                    value={selectedDate}
-                    onChange={handleDateChange}
-                    KeyboardButtonProps={{
-                      "aria-label": "change date",
-                    }}
-                  />
-                </MuiPickersUtilsProvider>
-
-                {/* Seção dos Dados da Conta */}
-                <Typography style={{ fontSize: "17px" }} align="left">
-                  Dados da Conta
-                </Typography>
-                <Divider
-                  style={{ marginBottom: "15px" }}
-                  class="divider"
-                  variant="middle"
-                />
-                <div id="camposContas" class="col-md-8">
-                  <TextField
-                    required
-                    style={{ marginBottom: "10px" }}
-                    fullWidth
-                    id="standard-basic"
-                    label="Email"
-                  />
-                  <TextField
-                    required
-                    style={{ marginBottom: "20px" }}
-                    fullWidth
-                    id="standard-basic"
-                    type="password"
-                    label="Senha"
-                  />
-                </div>
-
-                {/* Seção de Contato */}
-                <Typography style={{ fontSize: "17px" }} align="left">
-                  Contato
-                </Typography>
-                <Divider
-                  style={{ marginBottom: "15px" }}
-                  class="divider"
-                  variant="middle"
-                />
-                <div id="camposLogin" class="col-md-5">
-                  <TextField
-                    required
-                    fullWidth
-                    id="standard-basic"
-                    type="number"
-                    label="Telefone"
-                  />
-                </div>
-
-                {/* Seção de Privacidade*/}
-                <Typography style={{ fontSize: "17px" }} align="left">
-                  Privacidade
-                </Typography>
-                <Divider
-                  style={{ marginBottom: "15px" }}
-                  class="divider"
-                  variant="middle"
-                />
-                <Grid container justify="space-around">
+                <Grid item xs>
                   <FormControlLabel
                     control={
                       <GreenCheckbox
                         checked={state.checkedG}
                         onChange={handleChange}
-                        name="checkedA"
+                        name="checkedB"
                       />
                     }
-                    label="Eu aceito os termos de licença"
+                    label="Eu quero receber novidades por email e celular."
                   />
-                  <Button onClick={handleClickOpen} variant="outlined">
-                    Ler
-                  </Button>
                 </Grid>
-                <FormControlLabel
-                  control={
-                    <GreenCheckbox
-                      checked={state.checkedG}
-                      onChange={handleChange}
-                      name="checkedB"
-                    />
-                  }
-                  label="Eu quero receber novidades por email e celular."
-                />
-              </form>
-            </CardContent>
-
-            <br></br>
-
-            {/* Botões do final da tela */}
-            <div class="row">
-              <Grid container justify="space-around">
-                <Button
-                  href="/"
-                  style={{ marginBottom: "20px" }}
-                  id="btn_voltar"
-                  variant="outlined"
-                  color="primary"
-                >
-                  Voltar
-                </Button>
-
-                <Button
-                  href="/"
-                  style={{ marginBottom: "20px" }}
-                  id="btn_cadastrar"
-                  variant="outlined"
-                  color="primary"
-                >
-                  CADASTRAR
-                </Button>
               </Grid>
-            </div>
+            </form>
+          </CardContent>
 
-            {/* Caixa de diálogo dos termos de uso */}
-            <div>
-              <Dialog
-                open={open}
-                TransitionComponent={Transition}
-                keepMounted
-                onClose={handleClose}
-                aria-labelledby="alert-dialog-slide-title"
-                aria-describedby="alert-dialog-slide-description"
+          <br></br>
+
+          {/* Botões do final da tela */}
+          <Grid item xs>
+            <Grid container justify="space-around">
+              <Button
+                href="/"
+                style={{ marginBottom: "20px" }}
+                id="btn_voltar"
+                variant="outlined"
+                color="primary"
               >
-                <DialogTitle id="alert-dialog-slide-title">
-                  {"Termos De Uso"}
-                </DialogTitle>
-                <DialogContent>
-                  <DialogContentText id="alert-dialog-slide-description">
-                    <p>Você precisa aceitar os termos se quiser se cadastrar</p>
-                    <p align="right"> Versão 0.0.1</p>
-                  </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                  <Button onClick={handleClose} color="primary">
-                    Fechar
-                  </Button>
-                </DialogActions>
-              </Dialog>
-            </div>
-          </Card>
-        </div>
-      </div>
+                Voltar
+              </Button>
+
+              <Button
+                href="/"
+                style={{ marginBottom: "20px" }}
+                id="btn_cadastrar"
+                variant="outlined"
+                color="primary"
+              >
+                CADASTRAR
+              </Button>
+            </Grid>
+            </Grid>
+
+          {/* Caixa de diálogo dos termos de uso */}
+          <div>
+            <Dialog
+              open={open}
+              TransitionComponent={Transition}
+              keepMounted
+              onClose={handleClose}
+              aria-labelledby="alert-dialog-slide-title"
+              aria-describedby="alert-dialog-slide-description"
+            >
+              <DialogTitle id="alert-dialog-slide-title">
+                {"Termos De Uso"}
+              </DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-slide-description">
+                  <p>Você precisa aceitar os termos se quiser se cadastrar</p>
+                  <p align="right"> Versão 0.0.1</p>
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleClose} color="primary">
+                  Fechar
+                </Button>
+              </DialogActions>
+            </Dialog>
+          </div>
+        </Card>
+      </Grid>
     </div>
   );
 }
