@@ -7,6 +7,7 @@
 #btn_entrar{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
+    max-width: 50%;
     background-color: green;
 }
 #btn_entrar:hover{
