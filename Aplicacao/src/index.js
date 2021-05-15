@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 //eslint-disable-next-line
-import * as mdb from 'mdb-ui-kit';//SE APAGAR TÉ MATO LENTATAMENTEs
 
 ReactDOM.render(
   <React.StrictMode>

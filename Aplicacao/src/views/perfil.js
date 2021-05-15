@@ -1,10 +1,10 @@
 import React from 'react';
 import './css/perfil.css';
 
-
-
 function Perfil() {
+    
     return (
+        
         <div id="divPrincipal" class="container" style={{ height: '100vh' }}>
             <div class="row justify-content-center align-items-center h-100">
                 <div class="col-md-5 col-sm-8">
