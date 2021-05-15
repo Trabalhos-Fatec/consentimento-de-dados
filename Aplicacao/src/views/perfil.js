@@ -1,147 +1,155 @@
-import React from 'react';
-import './css/perfil.css';
+import React from "react";
+import "./css/perfil.css";
+
+//Importações do material-UI
+import {
+  CameraAlt,
+  Settings,
+  Lock,
+  Security,
+  Translate,
+  Info,
+} from "@material-ui/icons";
+import {
+  Divider,
+  IconButton,
+  Typography,
+  Grid,
+  CardActions,
+  CardContent,
+  Card,
+  makeStyles,
+  Avatar,
+  Fab,
+} from "@material-ui/core";
+
+const useStyles = makeStyles({
+  root: {
+    minWidth: 600,
+  },
+  bullet: {
+    display: "inline-block",
+    margin: "0 2px",
+    transform: "scale(0.8)",
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+  },
+  large: {
+    width: 250,
+    height: 250,
+  },
+});
 
 function Perfil() {
-    
-    return (
-        
-        <div id="divPrincipal" class="container" style={{ height: '100vh' }}>
-            <div class="row justify-content-center align-items-center h-100">
-                <div class="col-md-5 col-sm-8">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <div class="row">
-                                <div>
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg" class="img-fluid rounded-circle" alt="" />
-                                    <button class="btn btn-outline btn-lg btn-floating"> <i class="fas fa-camera"></i> </button>
-                                </div>
-                            </div>
+  const classes = useStyles();
+  const bull = <span className={classes.bullet}>•</span>;
 
-                        </div>
-
-                        <div class="card-body">
-
-                            <p class="card-text">
-                                <div class="row">
-                                    <p class="fs-4">Ana Maria Roberta</p>
-                                </div>
-
-                                <div class="container">
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <button type="button" class="btn btn-info btn-floating">
-                                                <i class="fas fa-cog fa-lg"></i>
-                                            </button>
-                                            <label>Geral</label>
-                                        </div>
-                                        <div class="col">
-                                            <button type="button" class="btn btn-info btn-floating">
-                                                <i class="fas fa-shield-alt fa-lg"></i>
-                                            </button>
-                                            <label>Segurança</label>
-                                        </div>
-                                        <div class="col">
-                                            <button
-                                                type="button"
-                                                class="btn btn-info btn-floating"
-                                                data-mdb-toggle="modal"
-                                                data-mdb-target="#exampleModal">
-                                                <i class="fas fa-lock fa-lg"></i>
-
-                                            </button>
-                                            <label>Privacidade</label>
-                                        </div>
-                                        <div class="col">
-                                            <button type="button" class="btn btn-info btn-floating">
-                                                <i class="fas fa-language fa-lg"></i>
-                                            </button>
-                                            <label>Idioma</label>
-                                        </div>
-                                        <div class="col">
-                                            <button type="button" class="btn btn-info btn-floating">
-                                                <i class="fas fa-info fa-lg"></i>
-                                            </button>
-                                            <label>
-                                                Informações
-                                            </label>
-                                        </div>
-
-
-                                        <div
-                                            class="modal fade"
-                                            id="exampleModal"
-                                            tabindex="-1"
-                                            aria-labelledby="exampleModalLabel"
-                                            aria-hidden="true"
-                                        >
-                                            <div>
-                                                <div class="modal-dialog modal-lg w-100">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Opções de Privacidade</h5>
-                                                            <button
-                                                                type="button"
-                                                                class="btn-close"
-                                                                data-mdb-dismiss="modal"
-                                                                aria-label="Close"
-                                                            ></button>
-                                                        </div>
-
-                                                        <div class="modal-body">
-
-                                                            <div class="form-check">
-                                                                <input
-                                                                    class="form-check-input"
-                                                                    type="checkbox"
-                                                                    value=""
-                                                                    id="flexCheckDefault"
-                                                                />
-                                                                <label class="form-check-label" for="flexCheckDefault">Eu aceito os termos de licença</label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input
-                                                                    class="form-check-input"
-                                                                    type="checkbox"
-                                                                    value=""
-                                                                    id="flexCheckDefault1"
-                                                                />
-                                                                <label class="form-check-label text-left" for="flexCheckDefault1">Eu quero receber novidades por email</label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input
-                                                                    class="form-check-input"
-                                                                    type="checkbox"
-                                                                    value=""
-                                                                    id="flexCheckDefault2"
-                                                                />
-                                                                <label class="form-check-label" for="flexCheckDefault2">Eu quero receber novidades pelo site</label>
-                                                            </div>
-                                                            <br></br>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <a href="/Historico" class="btn btn-info btn-sm">Histórico de modificação</a>
-                                                            <button type="button" class="btn btn-success btn-sm">Termos de Licença</button>                                                      
-                                                            <button type="button" class="btn btn-danger btn-sm" data-mdb-dismiss="modal">Salvar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </p>
-                        </div>
-
-                        <div class="card-footer">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+  return (
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      spacing={0}
+      style={{ minHeight: "100vh" }}
+    >
+      {/* Card de perfil */}
+      <Card className={classes.root} align="center">
+        <CardContent>
+          <Grid
+            container
+            direction="column"
+            justify="center"
+            spacing="2"
+            alignItems="center"
+          >
+            <Grid item xs>
+              <Grid
+                container
+                direction="row"
+                justify="center"
+                spacing={0}
+                alignItems="flex-end"
+              >
+                {/* Avatar */}
+                <Avatar
+                  src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg"
+                  className={classes.large}
+                />
+                <IconButton aria-label="upload picture" component="span">
+                  <CameraAlt />
+                </IconButton>
+              </Grid>
+            </Grid>
+            <Grid item xs>
+              {/* Nome */}
+              <Typography align="center" variant="h4" component="h2">
+                Ana Maria Roberta
+              </Typography>
+            </Grid>
+            <Grid item xs>
+              <Grid
+                container
+                direction="row"
+                justify="center"
+                spacing="3"
+                alignItems="center"
+              >
+                {/* Ferramentas */}
+                <Grid item xs>
+                  <Fab color="primary" aria-label="add" size="medium">
+                    <Settings />
+                  </Fab>
+                  <Typography align="center" component="h6">
+                    Configurações
+                  </Typography>
+                </Grid>
+                <Grid item xs>
+                  <Fab color="primary" aria-label="add" size="medium">
+                    <Security />
+                  </Fab>
+                  <Typography align="center" component="h6">
+                    Segurança
+                  </Typography>
+                </Grid>
+                <Grid item xs>
+                  <Fab color="primary" aria-label="add" size="medium">
+                    <Lock />
+                  </Fab>
+                  <Typography align="center" component="h6">
+                    Privacidade
+                  </Typography>
+                </Grid>
+                <Grid item xs>
+                  <Fab color="primary" aria-label="add" size="medium">
+                    <Translate />
+                  </Fab>
+                  <Typography align="center" component="h6">
+                    Idioma
+                  </Typography>
+                </Grid>
+                <Grid item xs>
+                  <Fab color="primary" aria-label="add" size="medium">
+                    <Info />
+                  </Fab>
+                  <Typography align="center" component="h6">
+                    Informações
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </CardContent>
+        <CardActions>
+          <br></br>
+        </CardActions>
+      </Card>
+    </Grid>
+  );
 }
-export default Perfil;
 
+export default Perfil;

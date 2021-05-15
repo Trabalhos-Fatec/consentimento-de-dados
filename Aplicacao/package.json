@@ -13,7 +13,6 @@
     "body-parser": "^1.19.0",
     "date-fns": "^2.21.3",
     "express": "^4.17.1",
-    "mdb-ui-kit": "^3.4.0",
     "node-modules": "^1.0.1",
     "nodemon": "^2.0.7",
     "react": "^17.0.2",
@@ -50,5 +49,6 @@
   "description": "*************************\r ## Indice",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }
