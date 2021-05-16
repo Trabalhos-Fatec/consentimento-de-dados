@@ -30,7 +30,7 @@ const useStyles = makeStyles({
   },
   gridizinha: {
     flexGrow: 1,
-  },
+   },
   bullet: {
     display: "inline-block",
     margin: "0 2px",
