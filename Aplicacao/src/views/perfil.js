@@ -170,10 +170,7 @@ function Perfil() {
                   </Grid>
                   <Grid item xs>
                     <Fab
-                      color="primary"
-                      aria-label="add"
-                      size="medium"
-                      onClick={handleClickOpen}
+                      color="primary"  
                     >
                       <Lock />
                     </Fab>
