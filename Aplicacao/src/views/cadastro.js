@@ -1,28 +1,32 @@
-import React from "react";
-import Divider from "@material-ui/core/Divider";
-import Card from "@material-ui/core/Card";
-import Grid from "@material-ui/core/Grid";
+import React, { useState } from "react";
+import {
+  Divider,
+  Card,
+  DialogTitle,
+  Grid,
+  CardContent,
+  Button,
+  Typography,
+  TextField,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  Slide,
+  Checkbox,
+  FormControlLabel,
+} from "@material-ui/core";
 import DateFnsUtils from "@date-io/date-fns";
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
 } from "@material-ui/pickers";
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
 import "./css/cadastro.css";
-import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import Slide from "@material-ui/core/Slide";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { green } from "@material-ui/core/colors";
 import { withStyles } from "@material-ui/core/styles";
+import { useHistory } from "react-router-dom";
+import Alert from "@material-ui/lab/Alert";
 
 const GreenCheckbox = withStyles({
   root: {
@@ -59,12 +63,74 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 function Cadastro() {
-
-    {/*  Variáveis State */}
+  {
+    /*  Variáveis State */
+  }
   const [state, setState] = React.useState({
-    checkedA: true,
-    checkedB: true,
+    checkedA: false,
+    checkedB: false,
   });
+  const [nome, setNome] = useState("");
+  const [sobrenome, setSobrenome] = useState("");
+  const [data, setData] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [telefone, setTelefone] = useState("");
+
+  const history = useHistory();
+  const goHome = () => {
+    alert("Cadastrado com Sucesso!!")
+    history.push("/");
+  }
+  const mensagem = () => alert("Preencha todos os campos corretamente");
+
+  const mensagemTermos = () => alert("Os Termos de Uso devem ser aceitos para continuar");
+
+  const mensagemTelefone = () => alert("Preencha o TELEFONE corretamente");
+
+  function validar() {
+    let a = document.getElementById("nome");
+    let b = document.getElementById("sobrenome");
+    let c = document.getElementById("data");
+    let d = document.getElementById("email");
+    let e = document.getElementById("senha");
+    let f = document.getElementById("telefone");
+
+    if (
+      a != null &&
+      b != null &&
+      c != null &&
+      d != null &&
+      e != null &&
+      f != null
+    ) {
+      a = a.value.trim();
+      b = b.value.trim();
+      c = c.value.trim();
+      d = d.value.trim();
+      e = e.value.trim();
+      f = f.value.toString();
+      f = f.trim();
+
+      if (a != "" && b != "" && c != "" && d != "" && e != "" && f != "") {
+        console.log("E", e);
+        if (f.length == 11) {
+          let termos = state.checkedA
+          if (termos == true) {
+            return goHome;
+          } else {
+            return mensagemTermos;
+          }
+        } else{
+          return mensagemTelefone;
+        }
+      } else {
+        return mensagem;
+      }
+    } else {
+      return mensagem;
+    }
+  }
 
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
@@ -88,6 +154,7 @@ function Cadastro() {
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
+    setData(selectedDate.value);
   };
 
   return (
@@ -125,11 +192,23 @@ function Cadastro() {
               variant="middle"
             />
 
-            <form  noValidate autoComplete="off">
+            <form noValidate autoComplete="off">
               <Grid item xs>
                 <Grid container direction="column">
-                  <TextField required id="standard-basic" label="Nome" />
-                  <TextField required id="standard-basic" label="Sobrenome" />
+                  <TextField
+                    required
+                    id="nome"
+                    label="Nome"
+                    name="nome"
+                    onChange={(e) => setNome(e.target.value)}
+                  />
+                  <TextField
+                    required
+                    id="sobrenome"
+                    label="Sobrenome"
+                    name="sobrenome"
+                    onChange={(e) => setSobrenome(e.target.value)}
+                  />
 
                   <MuiPickersUtilsProvider utils={DateFnsUtils}>
                     <KeyboardDatePicker
@@ -139,13 +218,14 @@ function Cadastro() {
                       variant="inline"
                       format="dd/MM/yyyy"
                       margin="normal"
-                      id="date-picker-inline"
+                      id="data"
                       label="Data de Nascimento"
                       value={selectedDate}
                       onChange={handleDateChange}
                       KeyboardButtonProps={{
                         "aria-label": "change date",
                       }}
+                      name="data"
                     />
                   </MuiPickersUtilsProvider>
                 </Grid>
@@ -165,16 +245,20 @@ function Cadastro() {
                   required
                   style={{ marginBottom: "10px" }}
                   fullWidth
-                  id="standard-basic"
+                  id="email"
                   label="Email"
+                  name="email"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <TextField
                   required
                   style={{ marginBottom: "20px" }}
                   fullWidth
-                  id="standard-basic"
+                  id="senha"
                   type="password"
                   label="Senha"
+                  name="senha"
+                  onChange={(e) => setSenha(e.target.value)}
                 />
               </Grid>
 
@@ -189,12 +273,14 @@ function Cadastro() {
               />
               <Grid item xs>
                 <TextField
-                style={{marginBottom:"35px"}}
+                  style={{ marginBottom: "35px" }}
                   required
                   fullWidth
-                  id="standard-basic"
+                  id="telefone"
                   type="number"
                   label="Telefone"
+                  name="telefone"
+                  onChange={(e) => setTelefone(e.target.value)}
                 />
               </Grid>
 
@@ -207,7 +293,7 @@ function Cadastro() {
                 class="divider"
                 variant="middle"
               />
-              <Grid container direction="column"  alignItems="flex-start">
+              <Grid container direction="column" alignItems="flex-start">
                 <Grid item xs>
                   <Grid container direction="row">
                     <Grid item xs sm="10">
@@ -261,16 +347,17 @@ function Cadastro() {
               </Button>
 
               <Button
-                href="/"
                 style={{ marginBottom: "20px" }}
                 id="btn_cadastrar"
                 variant="outlined"
                 color="primary"
+                type="submit"
+                onClick={validar()}
               >
                 CADASTRAR
               </Button>
             </Grid>
-            </Grid>
+          </Grid>
 
           {/* Caixa de diálogo dos termos de uso */}
           <div>

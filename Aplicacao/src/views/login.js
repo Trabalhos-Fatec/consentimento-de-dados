@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   Link,
@@ -19,6 +19,10 @@ import "./css/login.css";
 import { makeStyles } from "@material-ui/core/styles";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
+import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { NoMeetingRoom, SentimentSatisfiedSharp } from "@material-ui/icons";
+import { text } from "body-parser";
 
 const useStyles = makeStyles({
   root: {
@@ -61,6 +65,30 @@ function Login() {
 
   const classes = useStyles();
 
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+  const history = useHistory();
+  const goPerfil = () => history.push("/Perfil");
+
+  const mensagem = () => alert("Preencha todos os campos corretamente");
+
+  function validar() {
+    var em = document.getElementById("email");
+    var se = document.getElementById("senha");
+    if (em != null && se != null) {
+      em = em.value.trim();
+      se = se.value.trim();
+      if (em != "" && se != "") {
+        return goPerfil;
+      } else {
+        return mensagem;
+      }
+    } else {
+      return mensagem;
+    }
+  }
+
   return (
     <div className={classes.gridizinha}>
       <Grid
@@ -93,28 +121,39 @@ function Login() {
               </Grid>
 
               <Grid item xs>
-                <form noValidate autoComplete="off">
+                <form
+                  name="formulario"
+                  autoComplete="off"
+                  action=""
+                  id="formulario"
+                  method="POST"
+                >
                   <TextField
                     style={{ marginBottom: "10px" }}
                     fullWidth
-                    id="standard-basic"
                     label="Email"
+                    name="email"
+                    id="email"
+                    onChange={(email) => setEmail(email.target.value)}
                   />
                   <TextField
                     fullWidth
-                    id="standard-basic"
                     type="password"
                     label="Senha"
+                    name="senha"
+                    id="senha"
+                    onChange={(senha) => setSenha(senha.target.value)}
                   />
                 </form>
               </Grid>
               <Grid item xs>
                 <Button
-                  href="/Perfil"
                   id="btn_entrar"
                   fullWidth
                   variant="contained"
                   color="primary"
+                  type="submit"
+                  onClick={validar()}
                 >
                   ENTRAR
                 </Button>
