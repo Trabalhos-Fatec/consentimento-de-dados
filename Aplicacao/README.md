@@ -24,7 +24,7 @@ Pronto, finalizamos a instalção das dependências !! 🎉
 agora, para rodar o projeto, você vai precisar passar o seguite comando no terminal:
 
  ```
-npm start
+npm i start
  ```
  
  e o projeto deverá abrir a aplicação no seu navegador 😉.

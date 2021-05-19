@@ -6,6 +6,16 @@ import Axios from "axios";
 function Perfil() {
   let [trasnfEmail, setTransfEmail] = useState("");
   let [trasnfSms, setTransfSms] = useState("");
+  let [nome, setNome] = useState("");
+
+  const getNome = () => {
+    Axios.get("http://localhost:3001/api/getNome", {
+      nome : nome
+    })
+    .then((response)=> {
+      setNome(response.nome);
+    })
+  }
 
   const updateConsentment = () => {
     if(trasnfEmail === true) trasnfEmail = 1
@@ -65,7 +75,7 @@ function Perfil() {
             <div class="card-body">
               <p class="card-text">
                 <div class="row">
-                  <p class="fs-4">Ana Maria Roberta</p>
+                  <p class="fs-4">{nome}</p>
                 </div>
 
                 <div class="container">
@@ -147,7 +157,7 @@ function Perfil() {
                                   onChange={(e) =>
                                     setTransfEmail(e.target.checked)
                                   }
-                                  
+                                  checked= "true"
                                   id="transferenciaEmail"
                                 />
                                 <label
@@ -162,6 +172,7 @@ function Perfil() {
                                   onChange={(e) =>
                                     setTransfSms(e.target.checked)
                                   }
+                                  checked= "true"
                                   id="transferenciaSms"
                                 />
                                 <label
@@ -171,6 +182,21 @@ function Perfil() {
                                   Eu quero receber newsletter pelo site
                                 </label>
                               </div>
+                              <div class="form-check">
+                                <Checkbox
+                                  onChange={(e) =>
+                                    setTransfSms(e.target.checked)
+                                  }
+                                  checked= "true"
+                                  id="transferenciaSms"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="transferenciaSms"
+                                >
+                                  Compartilhamento das informações com empresas terceiras
+                                </label>
+                              </div>
                               <br></br>
                             </div>
                             <div class="modal-footer">
@@ -178,7 +204,7 @@ function Perfil() {
                                 Histórico de modificação
                               </a>
                               <button
-                                type="button"
+                                type="button" 
                                 class="btn btn-success btn-sm"
                               >
                                 Termos de Licença

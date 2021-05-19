@@ -1,7 +1,18 @@
+
 body {
-  background-color: whitesmoke;
+    background-color: whitesmoke;
+  }
+
+.ModificacaoPositiva{
+    background-color: #5fde43;
+    border-radius: 10px;
 }
 
-#bg-success{
-  background-color: transparent
+.ModificacaoNegativa{
+    background-color: #de4343;
+    border-radius: 10px;
+}
+
+.textoCard{
+  color: white;
 }

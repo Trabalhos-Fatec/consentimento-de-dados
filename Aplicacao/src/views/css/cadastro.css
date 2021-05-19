@@ -1,0 +1,28 @@
+cadastro > .divider{
+    background-color: black;
+    font-size: bold;
+    margin: 0px;
+}
+
+#Cadastro{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+}
+
+#txt_nome{
+    margin-right: 20px;
+}
+
+#btn_cadastrar{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: green;
+}
+#btn_voltar{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+
+}
+#gridizinha{
+    background-color: cyan;
+}
