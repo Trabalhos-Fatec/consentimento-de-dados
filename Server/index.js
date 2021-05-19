@@ -37,6 +37,7 @@ app.post('/api/updateTransf', (req,res) => {
 
     db.query(sqlUpdate, [statusEmail, statusSms], (err, result)=>{
         console.log("statusEmail: " + statusEmail + "\n statusSms: " + statusSms + "\n ERROR: " + err + "\n RESULT" + result);
+        console.log("Atualizado com sucesso! ");
         nodemon.restart()
     })
 });
@@ -50,7 +51,7 @@ app.post('/api/insertHist', (req, res) => {
 
     const sqlInsert = "INSERT INTO PNL_HISTORICO (data_modificacao, status_email, status_sms, id_usuario) VALUES(NOW(), ?, ?, 1) ;"
     db.query(sqlInsert, [statusEmail, statusSms], (err,result) => {
-        console.log("statusEmail: " + statusEmail + "\n statusSms: " + statusSms + "\n ERROR: " + err + "\n RESULT" + result);
+        console.log("Dado inserido no historico com sucesso! ");
     })
 });
 
