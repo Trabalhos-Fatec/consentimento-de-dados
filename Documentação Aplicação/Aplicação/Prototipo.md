@@ -81,3 +81,11 @@ Ainda no modal de privacidade e configurações de consentimentos, há um botão
 Também foi prototipado o sistema de notificação de mensagens do cliente dentro da plataforma que está localizada na página Inicial da plataforma Tutube.
 
 [<img src="https://raw.githubusercontent.com/Trabalhos-Fatec/consentimento-de-dados/main/Documenta%C3%A7%C3%A3o%20Aplica%C3%A7%C3%A3o/Imagens/Prototipo/TelaNotificacao.png" width="500" title="Protótipo - Tela de Notificação"/> ](https://www.figma.com/proto/rtOOh5QyGucf5KtH1UdlK7/Seguran%C3%A7a-da-Informa%C3%A7%C3%A3o?node-id=210%3A18&scaling=scale-down)
+
+
+## [Tela de Admin](https://www.figma.com/proto/rtOOh5QyGucf5KtH1UdlK7/Seguran%C3%A7a-da-Informa%C3%A7%C3%A3o?node-id=216%3A0&scaling=contain&page-id=0%3A1)
+
+A tela de admin permite que o administrador crie e envie mensagens para todos os usuários que consentem com o recebimento de notificações da plataforma Tutube.
+
+[<img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documenta%C3%A7%C3%A3o%20Aplica%C3%A7%C3%A3o/Imagens/Prototipo/TelaAdmin.png?raw=true" width="500" title="Protótipo - Tela de Notificação"/> ](https://www.figma.com/proto/rtOOh5QyGucf5KtH1UdlK7/Seguran%C3%A7a-da-Informa%C3%A7%C3%A3o?node-id=216%3A0&scaling=contain&page-id=0%3A1)
+
