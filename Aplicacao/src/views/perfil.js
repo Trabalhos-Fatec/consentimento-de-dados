@@ -231,7 +231,7 @@ function Perfil() {
         <Button  color="primary" href="/Historico">
           Histórico de modificações
           </Button>
-          <Button onClick={handleCloseDeny} color="danger">
+          <Button onClick={handleCloseDeny} color="secondary">
           Fechar
           </Button>
         </DialogActions>

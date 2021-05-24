@@ -78,7 +78,7 @@ function createData(
 
 //Dados da tabela
 const rows = [
-  createData("20/08/2020", "SIM (Verção:0.0.2)", "NÃO", "NÃO", "NÃO"),
+  createData("20/07/2020", "SIM (Verção:0.0.2)", "NÃO", "NÃO", "NÃO"),
   createData("01/06/2020", "SIM (Verção:0.0.1)", "NÃO", "SIM", "SIM"),
   createData("24/02/2020", "SIM (Verção:0.0.1)", "NÃO", "NÃO", "SIM"),
   createData("16/01/2020", "SIM (Verção:0.0.1)", "SIM", "SIM", "SIM"),

@@ -18,7 +18,6 @@ function Routes(){
                 <Route path="/Cadastro" exact component={Cadastro} />
                 <Route path="/Historico" exact component={Historico} />
                 <Route path="/Perfil" exact component={Perfil} />
-
             </Switch>        
         </BrowserRouter>
     );
