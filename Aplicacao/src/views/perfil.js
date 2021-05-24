@@ -2,36 +2,8 @@ import React from "react";
 import "./css/perfil.css";
 
 //Importações do material-UI
-import {
-  CameraAlt,
-  Settings,
-  Lock,
-  Security,
-  Translate,
-  Info,
-} from "@material-ui/icons";
-
-import {
-  Divider,
-  IconButton,
-  Typography,
-  Grid,
-  CardContent,
-  Card,
-  makeStyles,
-  Avatar,
-  Fab,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogContentText,
-  Button,
-  DialogActions,
-  Slide,
-  FormControlLabel,
-  withStyles,
-  Checkbox,
-} from "@material-ui/core";
+import {CameraAlt,Settings,Lock,Security,Translate,Info} from "@material-ui/icons";
+import {IconButton,Typography,Grid,CardContent,Card,makeStyles,Avatar,Fab,Dialog,DialogTitle,DialogContent,Button,DialogActions,Slide,FormControlLabel,withStyles,Checkbox,} from "@material-ui/core";
 import { green } from "@material-ui/core/colors";
 
 
@@ -170,7 +142,10 @@ function Perfil() {
                   </Grid>
                   <Grid item xs>
                     <Fab
-                      color="primary"  
+                      color="primary"
+                      aria-label="add"
+                      size="medium"
+                      onClick={handleClickOpen}  
                     >
                       <Lock />
                     </Fab>
@@ -253,7 +228,10 @@ function Perfil() {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleCloseDeny} color="primary">
+        <Button  color="primary" href="/Historico">
+          Histórico de modificações
+          </Button>
+          <Button onClick={handleCloseDeny} color="danger">
           Fechar
           </Button>
         </DialogActions>
