@@ -19,7 +19,7 @@ npm i node-modules --no-audit
 
 para criação da pasta node-modules e instalação das dependencias do projeto.
 
-Pronto, finalizamos a instalção das dependências !! 🎉
+Pronto, finalizamos a instalação das dependências !! 🎉
 
 agora, para rodar o projeto, você vai precisar passar o seguite comando no terminal:
 
