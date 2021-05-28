@@ -1,11 +1,38 @@
 import React from "react";
 import "./css/perfil.css";
+import { useHistory } from "react-router-dom";
 
 //Importações do material-UI
-import {CameraAlt,Settings,Lock,Security,Translate,Info} from "@material-ui/icons";
-import {IconButton,Typography,Grid,CardContent,Card,makeStyles,Avatar,Fab,Dialog,DialogTitle,DialogContent,Button,DialogActions,Slide,FormControlLabel,withStyles,Checkbox,} from "@material-ui/core";
+import {
+  CameraAlt,
+  Settings,
+  Lock,
+  Security,
+  Translate,
+  Info,
+} from "@material-ui/icons";
+import {
+  IconButton,
+  Typography,
+  Grid,
+  CardContent,
+  Card,
+  makeStyles,
+  Avatar,
+  Fab,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  Button,
+  DialogActions,
+  Slide,
+  FormControlLabel,
+  withStyles,
+  Checkbox,
+} from "@material-ui/core";
 import { green } from "@material-ui/core/colors";
-
+import HomeIcon from "@material-ui/icons/Home";
 
 //Checkboxs
 const GreenCheckbox = withStyles({
@@ -58,20 +85,32 @@ function Perfil() {
 
   //Controler do Dialog(modal)
   const [open, setOpen] = React.useState(false);
+  const [openT, setOpenT] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
+  };
+
+  const handleClickOpenT = () => {
+    setOpenT(true);
   };
 
   const handleClose = () => {
     setOpen(false);
   };
 
+  const handleCloseT = () => {
+    setOpenT(false);
+  };
+
   const handleCloseDeny = () => {
     setOpen(false);
   };
+  const history = useHistory();
+  const goHome = () => history.push("/Home");
 
   return (
+    <>
     <div className={classes.gridizinha}>
       <Grid
         container
@@ -145,7 +184,7 @@ function Perfil() {
                       color="primary"
                       aria-label="add"
                       size="medium"
-                      onClick={handleClickOpen}  
+                      onClick={handleClickOpen}
                     >
                       <Lock />
                     </Fab>
@@ -171,6 +210,17 @@ function Perfil() {
                   </Grid>
                 </Grid>
               </Grid>
+              <Grid item xs>
+                <IconButton
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-haspopup="true"
+                  color="inherit"
+                  onClick={goHome}
+                >
+                  <HomeIcon />
+                </IconButton>
+              </Grid>
             </Grid>
           </CardContent>
         </Card>
@@ -189,14 +239,11 @@ function Perfil() {
         <DialogContent>
           <FormControlLabel
             control={
-              <GreenCheckbox
-                checked={state.checkedA}
-                onChange={handleChange}
-              />
+              <GreenCheckbox checked={state.checkedA} onChange={handleChange} />
             }
             label="Eu aceito os termo de licença."
           />
-           <FormControlLabel
+          <FormControlLabel
             control={
               <GreenCheckbox
                 checked={state.checkedB}
@@ -206,7 +253,7 @@ function Perfil() {
             }
             label="Eu quero receber notificações pelo site."
           />
-           <FormControlLabel
+          <FormControlLabel
             control={
               <GreenCheckbox
                 checked={state.checkedC}
@@ -228,15 +275,48 @@ function Perfil() {
           />
         </DialogContent>
         <DialogActions>
-        <Button  color="primary" href="/Historico">
-          Histórico de modificações
+        <Button color="default"
+        onClick={handleClickOpenT}>
+            Ler Termos de Uso
           </Button>
+          <Button color="primary" href="/Historico">
+            Histórico de modificações
+          </Button>
+
           <Button onClick={handleCloseDeny} color="secondary">
-          Fechar
+            Fechar
           </Button>
         </DialogActions>
       </Dialog>
     </div>
+
+<div>
+            <Dialog
+              open={openT}
+              TransitionComponent={Transition}
+              keepMounted
+              onClose={handleCloseT}
+              aria-labelledby="alert-dialog-slide-title"
+              aria-describedby="alert-dialog-slide-description"
+            >
+              <DialogTitle id="alert-dialog-slide-title">
+                {"Termos De Uso"}
+              </DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-slide-description">
+                  <p>Você precisa aceitar os termos se quiser se cadastrar</p>
+                  <p align="right"> Versão 0.0.2</p>
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleCloseT} color="primary">
+                  Fechar
+                </Button>
+              </DialogActions>
+            </Dialog>
+          </div>
+    
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { ExpandMore } from "@material-ui/icons";
+import { useHistory } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -16,9 +17,12 @@ import {
   TableCell,
   withStyles,
   Paper,
+  IconButton
 } from "@material-ui/core";
 import "./css/historico.css";
 import { makeStyles } from "@material-ui/core/styles";
+import HomeIcon from "@material-ui/icons/Home";
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 //Propriedades da pagina
 const useStyles = makeStyles((theme) => ({
@@ -86,6 +90,9 @@ const rows = [
 //Pagina
 function Historico() {
   const classes = useStyles();
+  const history = useHistory();
+  const goHome = () => history.push("/Home");
+  const goProfile = () => history.push("/Perfil");
   return (
     <div className={classes.gridizinha}>
       <Grid
@@ -112,9 +119,41 @@ function Historico() {
             >
               {/* Título */}
               <Grid item xs>
-                <Typography align="left" variant="h4" component="h2">
+              
+              <Grid
+              container
+              direction="row"
+              justify="left"
+              spacing="2"
+              alignItems="stretch"
+            >
+             <Grid item xs>
+             <Typography style ={{marginLeft:"15px"}} align="left" variant="h4" component="h2">
                   Histórico de Modificações
                 </Typography>
+             </Grid>
+                
+             <IconButton
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-haspopup="true"
+                  color="inherit"
+                  onClick={goProfile}
+                >
+                  <AccountCircleIcon />
+                </IconButton>
+                <IconButton
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-haspopup="true"
+                  color="inherit"
+                  onClick={goHome}
+                >
+                  <HomeIcon />
+                </IconButton>
+                
+                
+                </Grid>
               </Grid>
               {/* Acordeão */}
               <Grid item xs>
@@ -246,6 +285,7 @@ function Historico() {
                     <Typography className={classes.heading}>
                       Histórico de Mudanças
                     </Typography>
+                    
                   </AccordionSummary>
                   <AccordionDetails>
                     <TableContainer component={Paper}>
@@ -299,8 +339,10 @@ function Historico() {
                         </TableBody>
                       </Table>
                     </TableContainer>
+                    
                   </AccordionDetails>
                 </Accordion>
+                
               </Grid>
             </Grid>
           </CardContent>

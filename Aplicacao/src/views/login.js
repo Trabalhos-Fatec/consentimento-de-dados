@@ -65,7 +65,7 @@ function Login() {
   const [senha, setSenha] = useState("");
 
   const history = useHistory();
-  const goPerfil = () => history.push("/Perfil");
+  const goHome = () => history.push("/Home");
 
   const mensagem = () => alert("Preencha todos os campos corretamente");
 
@@ -76,7 +76,7 @@ function Login() {
       em = em.value.trim();
       se = se.value.trim();
       if (em !== "" && se !== "") {
-        return goPerfil;
+        return goHome;
       } else {
         return mensagem;
       }
