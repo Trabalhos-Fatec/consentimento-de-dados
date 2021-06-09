@@ -102,45 +102,41 @@ O banco de dados é uma parte essencial de uma aplicação. Ele é o responsáve
     <tr>
       <td align="center">
         <a href="https://github.com/littlebru">
-          <img src="https://avatars.githubusercontent.com/u/41810923?s=460&u=029d64b8455acde0706bb3beffddd428fd6f4dd2&v=4" width="100px;" alt="Foto da Bruna Gomes no GitHub" style="max-width:100%;"><br>
-          <sub>
-            <b>Bruna Gomes</b>
-          </sub>
-        </a>
+          <img src="https://avatars.githubusercontent.com/u/41810923?s=460&u=029d64b8455acde0706bb3beffddd428fd6f4dd2&v=4" width="100px;" alt="Foto da Bruna Gomes no GitHub" style="max-width:100%;"></a><br><br>
+          <b>Bruna Gomes</b><br>
+        <a href="https://github.com/littlebru"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
+       <a href="https://www.linkedin.com/in/bru-gomes/"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
       </td>
       <td align="center">
         <a href="https://github.com/BrendoVidal">
-          <img src="https://avatars.githubusercontent.com/u/51121221?s=460&v=4" width="100px;" alt="Foto do Brendo Bubela no GitHub" style="max-width:100%;"><br>
-          <sub>
-            <b>Brendo Bubela</b>
-          </sub>
-        </a><br>
-      </td>
+          <img src="https://avatars.githubusercontent.com/u/51121221?s=460&v=4" width="100px;" alt="Foto do Brendo Bubela no GitHub" style="max-width:100%;"></a><br><br>
+          <b>Brendo Bubela</b><br>
+        <a href="https://github.com/BrendoVidal"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
+       <a href="https://www.linkedin.com/in/brendo-bubela-1978221b6/"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
+      </td>     
       <td align="center">
         <a href="https://github.com/ChristianDantasGermano">
-          <img src="https://avatars.githubusercontent.com/u/51031714?s=460&v=4" width="100px;" alt="Foto do Christian Dantas no GitHub" style="max-width:100%;"><br>
-          <sub>
-            <b>Christian Dantas</b>
-          </sub>
-        </a><br>
-      </td>
+          <img src="https://avatars.githubusercontent.com/u/51031714?s=460&v=4" width="100px;" alt="Foto do Christian Dantas no GitHub" style="max-width:100%;"></a><br><br>
+          <b>Christian Dantas</b><br>
+        <a href="https://github.com/ChristianDantasGermano"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
+       <a href="https://www.linkedin.com/in/christian-dantas-germano-286186180/"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
+      </td>    
       <td align="center">
         <a href="https://github.com/JenniferDominique">
-          <img src="https://avatars.githubusercontent.com/u/51061097?s=460&u=1da8c819e69228edf6cc6a2b529d06f9121c0e62&v=4" width="100px;" alt="Foto da Jennifer Dominique no GitHub" style="max-width:100%;"><br>
-          <sub>
-            <b>Jennifer Dominique</b>
-          </sub>
-        </a><br>
-      </td>
+          <img src="https://avatars.githubusercontent.com/u/51061097?s=460&u=1da8c819e69228edf6cc6a2b529d06f9121c0e62&v=4" width="100px;" alt="Foto da Jennifer Dominique no GitHub" style="max-width:100%;"></a><br><br>
+          <b>Jennifer Dominique</b><br>
+        <a href="https://github.com/JenniferDominique"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
+       <a href="https://www.linkedin.com/in/jenniferdominique/"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
+      </td>  
       <td align="center">
         <a href="https://github.com/Marianaaraujo17">
-          <img src="https://avatars.githubusercontent.com/u/51232766?s=460&v=4" width="100px;" alt="Foto da Mariana Araújo no Github" style="max-width:100%;"><br>
-          <sub>
-            <b>Mariana Araújo</b>
-          </sub>
-        </a><br>
-      </td>
-    </tr>
+          <img src="https://avatars.githubusercontent.com/u/51232766?s=460&v=4" width="100px;" alt="Foto da Mariana Araújo no Github" style="max-width:100%;"></a><br><br>
+       <b>Mariana Araújo</b><br>
+        <a href="https://github.com/Marianaaraujo17"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
+       <a href="https://www.linkedin.com/in/mariana-dos-santos-araujo-210326190"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
+     </td>
+     </tr>
+   
   </tbody>
 </table>
 
