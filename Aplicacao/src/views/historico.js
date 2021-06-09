@@ -144,8 +144,8 @@ function Historico() {
                                       <td>SIM</td>
                                       <td>{verifyStatus(value.status_email)}</td>
                                       <td>{verifyStatus(value.status_sms)}</td>
-                                      <td>{verifyStatus(value.status_sms)}</td>
-                                      <td>(Versão 0.0.1)</td>
+                                      <td>{verifyStatus(value.compartilhamento_terceiros)}</td>
+                                      <td><td>{verifyStatus(value.versao)}</td></td>
                                     </tr>
                          })}
                         </TableBody>
