@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   Card,
-  Link,
   CardContent,
   Typography,
   TextField,
@@ -19,10 +18,7 @@ import "./css/login.css";
 import { makeStyles } from "@material-ui/core/styles";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import { withRouter } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import { NoMeetingRoom, SentimentSatisfiedSharp } from "@material-ui/icons";
-import { text } from "body-parser";
 
 const useStyles = makeStyles({
   root: {
@@ -69,18 +65,18 @@ function Login() {
   const [senha, setSenha] = useState("");
 
   const history = useHistory();
-  const goPerfil = () => history.push("/Perfil");
+  const goHome = () => history.push("/Home");
 
   const mensagem = () => alert("Preencha todos os campos corretamente");
 
   function validar() {
     var em = document.getElementById("email");
     var se = document.getElementById("senha");
-    if (em != null && se != null) {
+    if (em !== null && se !== null) {
       em = em.value.trim();
       se = se.value.trim();
-      if (em != "" && se != "") {
-        return goPerfil;
+      if (em !== "" && se !== "") {
+        return goHome;
       } else {
         return mensagem;
       }

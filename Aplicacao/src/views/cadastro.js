@@ -1,4 +1,6 @@
+import "date-fns";
 import React, { useState } from "react";
+import DateFnsUtils from "@date-io/date-fns";
 import {
   Divider,
   Card,
@@ -16,7 +18,6 @@ import {
   Checkbox,
   FormControlLabel,
 } from "@material-ui/core";
-import DateFnsUtils from "@date-io/date-fns";
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
@@ -26,7 +27,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
 import { withStyles } from "@material-ui/core/styles";
 import { useHistory } from "react-router-dom";
-import Alert from "@material-ui/lab/Alert";
 
 const GreenCheckbox = withStyles({
   root: {
@@ -38,7 +38,7 @@ const GreenCheckbox = withStyles({
   checked: {},
 })((props) => <Checkbox color="default" {...props} />);
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     minWidth: 300,
   },
@@ -56,16 +56,18 @@ const useStyles = makeStyles({
   pos: {
     marginBottom: 12,
   },
-});
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 200,
+  },
+}));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 function Cadastro() {
-  {
-    /*  Variáveis State */
-  }
   const [state, setState] = React.useState({
     checkedA: false,
     checkedB: false,
@@ -79,12 +81,13 @@ function Cadastro() {
 
   const history = useHistory();
   const goHome = () => {
-    alert("Cadastrado com Sucesso!!")
+    alert("Cadastrado com Sucesso!!");
     history.push("/");
-  }
+  };
   const mensagem = () => alert("Preencha todos os campos corretamente");
 
-  const mensagemTermos = () => alert("Os Termos de Uso devem ser aceitos para continuar");
+  const mensagemTermos = () =>
+    alert("Os Termos de Uso devem ser aceitos para continuar");
 
   const mensagemTelefone = () => alert("Preencha o TELEFONE corretamente");
 
@@ -112,16 +115,16 @@ function Cadastro() {
       f = f.value.toString();
       f = f.trim();
 
-      if (a != "" && b != "" && c != "" && d != "" && e != "" && f != "") {
+      if (a !== "" && b !== "" && c !== "" && d !== "" && e !== "" && f !== "") {
         console.log("E", e);
-        if (f.length == 11) {
-          let termos = state.checkedA
-          if (termos == true) {
+        if (f.length === 11) {
+          let termos = state.checkedA;
+          if (termos === true) {
             return goHome;
           } else {
             return mensagemTermos;
           }
-        } else{
+        } else {
           return mensagemTelefone;
         }
       } else {
@@ -293,27 +296,26 @@ function Cadastro() {
                 class="divider"
                 variant="middle"
               />
-              <Grid container direction="column" alignItems="flex-start">
+              <Grid
+                container
+                direction="column"
+                justify="flex-start"
+                alignItems="baseline"
+              >
                 <Grid item xs>
-                  <Grid container direction="row">
-                    <Grid item xs sm="10">
-                      <FormControlLabel
-                        control={
-                          <GreenCheckbox
-                            checked={state.checkedG}
-                            onChange={handleChange}
-                            name="checkedA"
-                          />
-                        }
-                        label="Eu aceito os termos de licença"
+                  <FormControlLabel
+                    control={
+                      <GreenCheckbox
+                        checked={state.checkedG}
+                        onChange={handleChange}
+                        name="checkedA"
                       />
-                    </Grid>
-                    <Grid item xs sm="2">
-                      <Button onClick={handleClickOpen} variant="outlined">
-                        Ler
-                      </Button>
-                    </Grid>
-                  </Grid>
+                    }
+                    label="Eu aceito os termos de licença"
+                  />
+                  <Button onClick={handleClickOpen} variant="outlined">
+                    Ler
+                  </Button>
                 </Grid>
                 <Grid item xs>
                   <FormControlLabel
@@ -367,17 +369,17 @@ function Cadastro() {
               keepMounted
               onClose={handleClose}
               aria-labelledby="alert-dialog-slide-title"
-              aria-describedby="alert-dialog-slide-description" 
+              aria-describedby="alert-dialog-slide-description"
             >
               <DialogTitle id="alert-dialog-slide-title">
                 {"Termos De Uso"}
               </DialogTitle>
               <DialogContent>
                 <DialogContentText id="alert-dialog-slide-description">
-                  <p>Esta política descreve as informações que processamos para viabilizar a operação do Tutube
+                <p>Esta política descreve as informações que processamos para viabilizar a operação do Tutube
                      e de outros produtos e recursos oferecidos pela Tutube.
                      Você pode encontrar informações e ferramentas adicionais nas Configurações do <a href="#">Tutube</a></p>
-                  <p align="right"> Versão 0.0.1</p>
+                  <p align="right"> Versão 0.0.2</p>
                 </DialogContentText>
               </DialogContent>
               <DialogActions>
